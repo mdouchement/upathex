@@ -1,0 +1,10 @@
+# https://taskfile.dev
+# https://github.com/mdouchement/checksum
+
+version: '3'
+
+tasks:
+  test:
+    desc: Run tests in a container
+    cmds:
+      - docker run --rm -v $(pwd):/upathex --workdir=/upathex -it golang go test -v .
